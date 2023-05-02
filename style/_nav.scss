@@ -1,0 +1,107 @@
+main {
+  background-color: #ececec;
+  background-image: url("../img/background.svg");
+  background-size: cover;
+}
+
+.main-menu {
+  position: relative;
+  font-family: "Montserrat", Arial, sans-serif;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img-container {
+    width: 20%;
+    height: 100px;
+    cursor: pointer;
+    background: url("/img/icons/logo.svg") no-repeat;
+    background-size: contain;
+    background-position: 0% 100%;
+
+    @media screen and (max-width: 1000px) {
+      background-position: 0% 70%;
+    }
+
+    @media screen and (max-width: 767px) {
+      min-width: 150px;
+      width: 30%;
+    }
+
+    @media screen and (max-width: 414px) {
+      min-width: 130px;
+      width: 40%;
+      height: 70px;
+    }
+
+    img {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    width: 80%;
+  }
+
+  &__btn-container {
+    margin-left: auto;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    font-family: "VAG-World", Arial, sans-serif;
+    font-size: 3rem;
+    line-height: 100%;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 2.3rem;
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.grades {
+  margin: 0 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1000px) {
+    margin: 0 auto;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 414px) {
+    bottom: -40px;
+    gap: 7%;
+  }
+
+  &__link {
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+
+    @media screen and (max-width: 414px) {
+      font-size: 1.6rem;
+    }
+  }
+}

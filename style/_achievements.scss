@@ -1,0 +1,87 @@
+.achievements {
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 414px) {
+    margin-bottom: 15cqw;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @media screen and (max-width: 414px) {
+      margin-bottom: 10cqw;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 4cqw;
+
+    @media screen and (max-width: 414px) {
+      gap: 4cqw 2cqw;
+    }
+  }
+}
+
+.achievement {
+  max-width: 180px;
+
+  @media screen and (max-width: 414px) {
+    width: 45%;
+  }
+
+  &__img-container {
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+
+    @media screen and (max-width: 414px) {
+      margin: 0 auto 3cqw;
+      width: 25cqw;
+      height: 25cqw;
+    }
+  }
+
+  &__img {
+    @media screen and (max-width: 414px) {
+      width: 70%;
+    }
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: "VAG-World", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 100%;
+
+    @media screen and (max-width: 414px) {
+      font-size: 7cqw;
+    }
+  }
+
+  &__text {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 130%;
+    text-align: center;
+
+    @media screen and (max-width: 414px) {
+      font-size: 3.5cqw;
+    }
+  }
+}

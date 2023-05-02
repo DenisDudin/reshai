@@ -1,0 +1,454 @@
+.feedback {
+  &__title {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+
+.feedback-container {
+  padding: 30px 90px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 30px 9cqw;
+  }
+
+  &__img-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+
+      @media screen and (max-width: 1200px) {
+        height: 35cqw;
+      }
+
+      @media screen and (max-width: 1000px) {
+        width: 65%;
+      }
+
+      @media screen and (max-width: 767px) {
+        height: auto;
+      }
+    }
+  }
+
+  &__form-block {
+    width: 45%;
+
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "VAG-world", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 110%;
+
+    @media screen and (max-width: 767px) {
+      font-size: 4.5cqw;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 120%;
+    text-align: center;
+
+    @media screen and (max-width: 414px) {
+      font-size: 4.2cqw;
+    }
+  }
+}
+
+.feedback-form {
+  label {
+    margin-bottom: 10px;
+    display: block;
+
+    @media screen and (max-width: 414px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 8px 15px;
+    display: block;
+    font-size: 1.8rem;
+    background: $input-color;
+    border: none;
+    border-radius: 40px;
+  }
+
+  &__choice {
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+
+    @media screen and (max-width: 414px) {
+      margin-bottom: 15px;
+    }
+
+    li {
+      // display: flex;
+      // flex-direction: column;
+      position: relative;
+      // padding: 10px;
+      // padding-left: 40px;
+      // height: 30px;
+    }
+
+    label:before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      background: $main-color;
+      position: absolute;
+      left: 42%;
+      top: calc(50% - 1px);
+      box-sizing: border-box;
+      border-radius: 50%;
+
+      @media screen and (max-width: 414px) {
+        left: 44%;
+        top: calc(50% + 2px);
+      }
+    }
+
+    input[type="radio"] {
+      opacity: 0;
+      -webkit-appearance: none;
+      display: inline-block;
+      vertical-align: middle;
+      z-index: 100;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      left: 42%;
+      top: calc(50% - 1px);
+      cursor: pointer;
+
+      @media screen and (max-width: 414px) {
+        left: 44%;
+        top: calc(50% + 2px);
+      }
+    }
+
+    .bullet {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      left: 34.5%;
+      top: 18px;
+      border: 5px solid $light-gray;
+      opacity: 0;
+      border-radius: 50%;
+    }
+
+    input[type="radio"]:checked ~ .bullet {
+      position: absolute;
+      opacity: 1;
+      animation-name: explode;
+      animation-duration: 0.35s;
+    }
+
+    .line {
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background-color: #000;
+      opacity: 0;
+    }
+
+    .line.zero {
+      left: 11px;
+      top: -21px;
+      transform: translateY(20px);
+      width: 2px;
+      height: 10px;
+    }
+
+    .line.one {
+      right: -7px;
+      top: -11px;
+      transform: rotate(-55deg) translate(-9px);
+    }
+
+    .line.two {
+      right: -20px;
+      top: 11px;
+      transform: translate(-9px);
+    }
+
+    .line.three {
+      right: -8px;
+      top: 35px;
+      transform: rotate(55deg) translate(-9px);
+    }
+
+    .line.four {
+      left: -8px;
+      top: -11px;
+      transform: rotate(55deg) translate(9px);
+    }
+
+    .line.five {
+      left: -20px;
+      top: 11px;
+      transform: translate(9px);
+    }
+
+    .line.six {
+      left: -8px;
+      top: 35px;
+      transform: rotate(-55deg) translate(9px);
+    }
+
+    .line.seven {
+      left: 11px;
+      bottom: -21px;
+      transform: translateY(-20px);
+      width: 2px;
+      height: 10px;
+    }
+
+    input[type="radio"]:checked ~ .bullet .line.zero {
+      animation-name: drop-zero;
+      animation-delay: 0.1s;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+    }
+
+    input[type="radio"]:checked ~ .bullet .line.one {
+      animation-name: drop-one;
+      animation-delay: 0.1s;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+    }
+
+    input[type="radio"]:checked ~ .bullet .line.two {
+      animation-name: drop-two;
+      animation-delay: 0.1s;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+    }
+
+    input[type="radio"]:checked ~ .bullet .line.three {
+      animation-name: drop-three;
+      animation-delay: 0.1s;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+    }
+
+    input[type="radio"]:checked ~ .bullet .line.four {
+      animation-name: drop-four;
+      animation-delay: 0.1s;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+    }
+
+    input[type="radio"]:checked ~ .bullet .line.five {
+      animation-name: drop-five;
+      animation-delay: 0.1s;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+    }
+
+    input[type="radio"]:checked ~ .bullet .line.six {
+      animation-name: drop-six;
+      animation-delay: 0.1s;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+    }
+
+    input[type="radio"]:checked ~ .bullet .line.seven {
+      animation-name: drop-seven;
+      animation-delay: 0.1s;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &__personal-data-info {
+    text-align: center;
+    color: $light-gray;
+  }
+}
+
+@keyframes explode {
+  0% {
+    opacity: 0;
+    transform: scale(10);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drop-zero {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    height: 10px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-2px);
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-one {
+  0% {
+    opacity: 0;
+    transform: rotate(-55deg) translate(-20px);
+    width: 10px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-55deg) translate(9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-two {
+  0% {
+    opacity: 0;
+    transform: translate(-20px);
+    width: 10px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-three {
+  0% {
+    opacity: 0;
+    transform: rotate(55deg) translate(-20px);
+    width: 10px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(55deg) translate(9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-four {
+  0% {
+    opacity: 0;
+    transform: rotate(55deg) translate(20px);
+    width: 10px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(55deg) translate(-9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-five {
+  0% {
+    opacity: 0;
+    transform: translate(20px);
+    width: 10px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-six {
+  0% {
+    opacity: 0;
+    transform: rotate(-55deg) translate(20px);
+    width: 10px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-55deg) translate(-9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-seven {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    height: 10px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(2px);
+    height: 0px;
+    opacity: 0;
+  }
+}

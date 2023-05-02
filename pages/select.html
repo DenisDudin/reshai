@@ -34,8 +34,9 @@
     <main>
       <section class="filters">
         <div class="filters__container container">
-          <select class="filters__select-field select-block">
-            <option value="5" selected>5 класс</option>
+          <select id="class-select" class="filters__select-field select-block">
+            <option value="all" selected>Выбрать</option>
+            <option value="5">5 класс</option>
             <option value="6">6 класс</option>
             <option value="7">7 класс</option>
             <option value="8">8 класс</option>
@@ -44,55 +45,57 @@
             <option value="11">11 класс</option>
           </select>
 
-          <select class="filters__select-field select-block">
-            <option value="EGE" selected>Сдать ЕГЭ</option>
+          <select id="group-select" class="filters__select-field select-block">
+            <option value="all" selected>Выбрать</option>
+            <option value="EGE">Сдать ЕГЭ</option>
             <option value="OGE">Сдать ОГЭ</option>
-            <option value="Pod">Подготовка</option>
+            <option value="Pov">Повысить успеваемость</option>
           </select>
 
-          <select class="filters__select-field select-block">
-            <option value="1" selected>Мини-группы</option>
-            <option value="2">Классы</option>
-            <option value="3">Индивидуальное</option>
-          </select>
-
-          <select class="filters__select-field select-block">
-            <option value="1" selected>Репетиторы</option>
-            <option value="2">Курсы</option>
+          <select id="type-select" class="filters__select-field select-block">
+            <option value="all" selected>Выбрать</option>
+            <option value="mini-group">Мини-группы</option>
+            <option value="course">Курсы</option>
+            <option value="mentor">Репетиторы</option>
           </select>
         </div>
       </section>
 
-      <section class="teaching-list">
-        <div class="teaching-list__wrapper container">
-          <div class="teaching-list__item teaching-item">
-            <div class="teaching-item__img-wrapper">
-              <div class="teaching-item__img-container">
+      <section id="product-list" class="product-list">
+        <div class="product-list__wrapper container">
+          <div
+            class="product product-list__item product-item"
+            data-classes="8"
+            data-groups="1"
+            data-types="small"
+          >
+            <div class="product-item__img-wrapper">
+              <div class="product-item__img-container">
                 <img
                   src="../img/photos/mentors/ViktoriaVi.jpg"
                   alt="Фото"
-                  class="teaching-item__img"
+                  class="product-item__img"
                 />
-                <div class="teaching-item__img-description">
-                  <h3 class="teaching-item__img-title">Viktoria Vi</h3>
-                  <p class="teaching-item__img-text">Lorem ipsum dolor</p>
+                <div class="product-item__img-description">
+                  <h3 class="product-item__img-title">Viktoria Vi</h3>
+                  <p class="product-item__img-text">Lorem ipsum dolor</p>
                 </div>
               </div>
             </div>
 
-            <div class="teaching-item__info-container">
-              <div class="teaching-item__info-up">
-                <h2 class="teaching-item__info-title">
+            <div class="product-item__info-container">
+              <div class="product-item__info-up">
+                <h2 class="product-item__info-title">
                   Репетитор по математике для 5-9 классов
                 </h2>
 
-                <p class="teaching-item__info-text">
+                <p class="product-item__info-text">
                   На занятиях с репетитором по математике для 5-9 классов ученик
                   сможет устранить пробелы в знаниях за предыдущие годы,
                   одновременно осваивая текущие темы по предмету
                 </p>
 
-                <div class="teaching-item__info-markers markers-list">
+                <div class="product-item__info-markers markers-list">
                   <div class="markers-list__item marker">
                     <div class="marker__img-container">
                       <img
@@ -131,16 +134,16 @@
                 </div>
               </div>
 
-              <div class="teaching-item__info-down">
-                <div class="teaching-item__price">17 500 ₽ за курс</div>
+              <div class="product-item__info-down">
+                <div class="product-item__price">17 500 ₽ за курс</div>
 
-                <div class="teaching-item__btn-block">
+                <div class="product-item__btn-block">
                   <button
-                    class="teaching-item__btn one-color-btn one-color-btn--main"
+                    class="product-item__btn one-color-btn one-color-btn--main"
                   >
                     Записаться
                   </button>
-                  <button class="teaching-item__btn one-color-btn">
+                  <button class="product-item__btn one-color-btn">
                     Подробнее
                   </button>
                 </div>
@@ -148,34 +151,40 @@
             </div>
           </div>
 
-          <div class="teaching-list__item teaching-item">
-            <div class="teaching-item__img-wrapper">
-              <div class="teaching-item__img-container">
+          <div
+            class="product product-list__item product-item"
+            class="card"
+            data-classes="9"
+            data-groups="2"
+            data-types="large"
+          >
+            <div class="product-item__img-wrapper">
+              <div class="product-item__img-container">
                 <img
                   src="../img/photos/mentors/ViktoriaVi.jpg"
                   alt="Фото"
-                  class="teaching-item__img"
+                  class="product-item__img"
                 />
-                <div class="teaching-item__img-description">
-                  <h3 class="teaching-item__img-title">Viktoria Vi</h3>
-                  <p class="teaching-item__img-text">Lorem ipsum dolor</p>
+                <div class="product-item__img-description">
+                  <h3 class="product-item__img-title">Viktoria Vi</h3>
+                  <p class="product-item__img-text">Lorem ipsum dolor</p>
                 </div>
               </div>
             </div>
 
-            <div class="teaching-item__info-container">
-              <div class="teaching-item__info-up">
-                <h2 class="teaching-item__info-title">
+            <div class="product-item__info-container">
+              <div class="product-item__info-up">
+                <h2 class="product-item__info-title">
                   Репетитор по математике для 5-9 классов
                 </h2>
 
-                <p class="teaching-item__info-text">
+                <p class="product-item__info-text">
                   На занятиях с репетитором по математике для 5-9 классов ученик
                   сможет устранить пробелы в знаниях за предыдущие годы,
                   одновременно осваивая текущие темы по предмету
                 </p>
 
-                <div class="teaching-item__info-markers markers-list">
+                <div class="product-item__info-markers markers-list">
                   <div class="markers-list__item marker">
                     <div class="marker__img-container">
                       <img
@@ -214,16 +223,16 @@
                 </div>
               </div>
 
-              <div class="teaching-item__info-down">
-                <div class="teaching-item__price">17 500 ₽ за курс</div>
+              <div class="product-item__info-down">
+                <div class="product-item__price">17 500 ₽ за курс</div>
 
-                <div class="teaching-item__btn-block">
+                <div class="product-item__btn-block">
                   <button
-                    class="teaching-item__btn one-color-btn one-color-btn--main"
+                    class="product-item__btn one-color-btn one-color-btn--main"
                   >
                     Записаться
                   </button>
-                  <button class="teaching-item__btn one-color-btn">
+                  <button class="product-item__btn one-color-btn">
                     Подробнее
                   </button>
                 </div>
@@ -233,5 +242,56 @@
         </div>
       </section>
     </main>
+
+    <script src="/script/product-list.js"></script>
   </body>
 </html>
+
+<!-- <label for="class-select">Select Class:</label>
+<select id="class-select">
+  <option value="all">All Classes</option>
+  <option value="5">Class 5</option>
+  <option value="6">Class 6</option>
+  <option value="7">Class 7</option>
+  <option value="8">Class 8</option>
+  <option value="9">Class 9</option>
+  <option value="10">Class 10</option>
+</select>
+
+<label for="group-select">Select Group:</label>
+<select id="group-select">
+  <option value="all">All Groups</option>
+  <option value="1">Group 1</option>
+  <option value="2">Group 2</option>
+  <option value="3">Group 3</option>
+</select>
+
+<label for="type-select">Select Type:</label>
+<select id="type-select">
+  <option value="all">All Types</option>
+  <option value="large">Large</option>
+  <option value="small">Small</option>
+</select>
+
+<div id="card-container">
+  <div class="card" data-classes="5 6 7" data-groups="1" data-types="large">
+    <h2>Card 1</h2>
+    <p>5th grade, 6th grade, 7th grade, 1st group, large group</p>
+  </div>
+  <div class="card" data-classes="6" data-groups="2" data-types="large">
+    <h2>Card 2</h2>
+    <p>6th grade, 2nd group, large group</p>
+  </div>
+  <div class="card" data-classes="7" data-groups="3" data-types="small">
+    <h2>Card 3</h2>
+    <p>7th grade, 3rd group, small group</p>
+  </div>
+  <div class="card" data-classes="8" data-groups="1" data-types="small">
+    <h2>Card 4</h2>
+    <p>8th grade, 1st group, small group</p>
+  </div>
+  <div class="card" data-classes="9" data-groups="2" data-types="large">
+    <h2>Card 5</h2>
+    <p>9th grade, 2nd group, large group</p>
+  </div>
+</div> -->

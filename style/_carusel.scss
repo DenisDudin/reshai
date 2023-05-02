@@ -1,0 +1,195 @@
+.reviews {
+  padding: 100px 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @media screen and (max-width: 1000px) {
+      margin-bottom: 6cqw;
+    }
+  }
+}
+
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+}
+
+.card-carousel {
+  --card-width: 100%;
+  --card-max-width: 380px;
+  --card-height: 500px;
+  --carousel-min-width: 320px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(var(--card-height) + 10px);
+  min-width: var(--carousel-min-width);
+  transition: filter 0.3s ease;
+  overflow: hidden;
+
+  @media screen and (max-width: 1200px) {
+    --card-max-width: 330px;
+    --card-height: 430px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    --card-max-width: 300px;
+    --card-height: 380px;
+  }
+
+  @media screen and (max-width: 767px) {
+    --card-max-width: 280px;
+    --card-height: 320px;
+  }
+
+  @media screen and (max-width: 414px) {
+    --card-max-width: 240px;
+    --card-height: 310px;
+  }
+}
+
+.card-carousel.smooth-return {
+  transition: all 0.2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  min-width: 220px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  filter: brightness(0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1);
+}
+
+.card {
+  margin-bottom: 10px;
+  padding: 30px 40px;
+  border-radius: 40px;
+
+  @media screen and (max-width: 1000px) {
+    padding: 20px 30px;
+    border-radius: 30px;
+  }
+
+  @media screen and (max-width: 414px) {
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+
+  &__stars-quotes {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    gap: 3px;
+
+    @media screen and (max-width: 767px) {
+      height: 1px;
+    }
+  }
+
+  &__star {
+    width: 30px;
+    height: 30px;
+    background: url("/img/icons/star.svg") no-repeat center;
+    background-size: contain;
+
+    @media screen and (max-width: 1200px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__quotes {
+    width: 30px;
+    height: 30px;
+    background: url("/img/icons/quotes.svg") no-repeat center;
+    background-size: contain;
+
+    @media screen and (max-width: 1200px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__text {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: #000000;
+    text-align: left;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 1.4rem;
+      line-height: 120%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__img-container {
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    justify-content: end;
+  }
+
+  &__img {
+    width: 30%;
+
+    @media screen and (max-width: 1200px) {
+      width: 25%;
+    }
+  }
+}

@@ -1,0 +1,412 @@
+//Список
+.filters {
+  padding: 30px 0;
+  margin-bottom: 20px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__select-field {
+    padding: 1rem 3rem;
+    appearance: none;
+    font-size: 2rem;
+
+    &:not([multiple]) {
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) 1.2rem;
+      background-size: 2rem auto;
+      background-image: url("../img/icons/arrows-down.svg");
+    }
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+.select-block {
+  border: 2px solid $main-color;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 40px;
+  background: white;
+}
+
+.product-list {
+  margin-top: 40px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+  }
+}
+
+.product-item {
+  &__img-wrapper {
+    width: 30%;
+  }
+
+  &__img-container {
+    position: relative;
+    border: 4px solid white;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 10;
+  }
+
+  &__img {
+    min-width: 100%;
+  }
+
+  &__img-description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 16px;
+  }
+
+  &__img-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__img-text {
+    font-size: 1.4rem;
+  }
+
+  &__info-container {
+    width: 80%;
+  }
+
+  &__info-up {
+    margin-top: 30px;
+    padding: 50px 40px 20px 80px;
+    background: white;
+    font-family: "Montserrat";
+    font-style: normal;
+    border-radius: 0 40px 0 0;
+  }
+
+  &__info-title {
+    font-size: 2.8rem;
+    text-align: right;
+    margin-bottom: 3rem;
+  }
+
+  &:nth-child(odd) &__info-title {
+    color: #02ccc0;
+  }
+
+  &:nth-child(even) &__info-title {
+    color: #ff5b7e;
+  }
+
+  &__info-text {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    line-height: 140%;
+    text-align: right;
+  }
+
+  &__info-markers {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+  }
+
+  &__info-down {
+    display: flex;
+    font-family: "Montserrat";
+    font-style: normal;
+  }
+
+  &__price {
+    padding-top: 20px;
+    width: 50%;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__btn-block {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 50%;
+    padding: 20px;
+    background: white;
+    border-radius: 0px 0 40px 40px;
+  }
+}
+
+.marker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__text {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #333333;
+  }
+}
+
+//Produst info
+.info-item {
+  padding: 50px 0;
+}
+.item-title {
+  margin-bottom: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: #8aa6cd;
+}
+
+.item-markers {
+  display: flex;
+  gap: 20px;
+
+  &__marker {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+  }
+}
+
+.info-product-wrapper {
+  margin: 80px 0;
+  display: flex;
+}
+
+.info-product {
+  font-family: "Montserrat";
+  font-style: normal;
+
+  color: #333333;
+
+  &__title {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+  }
+
+  &__text {
+    margin-bottom: 5rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 150%;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    a {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: #333333;
+    }
+  }
+}
+
+.lesson-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  justify-content: center;
+}
+
+.lesson-stcker {
+  padding: 2rem 4rem;
+  display: flex;
+  min-width: 300px;
+  width: 45%;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 15px 0 0 $main-color inset;
+  border-radius: 35px;
+
+  &__left {
+    margin-right: 30px;
+  }
+
+  &__day {
+    margin-bottom: 2rem;
+    font-family: "VAG-World", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.6rem;
+  }
+
+  &__time,
+  &__info {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.2em;
+  }
+
+  &__name {
+    margin-bottom: 2rem;
+    font-family: "VAG-World";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: $main-color;
+  }
+}
+
+.visit-reviews {
+  padding: 100px 0;
+}
+
+.visit-reviews-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.visited-form {
+  padding: 40px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 4px 26px #beb29e;
+  border-radius: 20px;
+
+  @media screen and (max-width: 1000px) {
+    padding: 10px 30px 30px;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.8rem;
+    text-align: center;
+    color: #216034;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__msg,
+  &__input {
+    padding: 7px;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 3px solid rgba(82, 82, 82, 0.2);
+    border-radius: 10px;
+  }
+
+  &__download {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__download-text {
+    margin-right: 1rem;
+    color: #353535;
+    margin-bottom: 0;
+    line-height: 110%;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.wrapper {
+  .file-upload {
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 4px solid #ffffff;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #59ac01 50%, #ffffff 50%);
+    background-size: 100% 200%;
+    transition: all 1s;
+    color: #ffffff;
+    font-size: 100px;
+
+    input[type="file"] {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-position: 0 -100%;
+
+      color: #59ac01;
+    }
+
+    .fa {
+      font-size: 3rem;
+    }
+  }
+}
+
+.personal-data {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: start;
+
+  input {
+    margin-right: 10px;
+  }
+
+  label {
+    margin-bottom: 0;
+    line-height: 110%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #444;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 1.2rem;
+    }
+  }
+}
