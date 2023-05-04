@@ -31,9 +31,9 @@
               <button class="one-color-btn one-color-btn--main">Курсы</button>
             </div>
           </div> -->
-          <div class="main-menu__phone" href="”tel:+79999999999”">
-            8 (999) 999-99-99
-          </div>
+          <a class="main-menu__phone" href="tel:+79803740656">
+            8 (980) 374-06-56
+          </a>
         </div>
       </nav>
     </header>
@@ -42,7 +42,9 @@
       <section class="about">
         <div class="about__container container">
           <div class="about__info info">
-            <h1 class="info__title">Школа математики для 5-11 классов</h1>
+            <h1 class="info__title">
+              Майский марафон по математике 22 мая - 7 июня
+            </h1>
 
             <div class="info__text">
               <ul>
@@ -380,16 +382,29 @@
               <!-- <p class="feedback-container__text">
                 для записи на бесплатный урок
               </p> -->
-              <form action="" class="feedback-container__form feedback-form">
-                <label for="" class="feedback-form__name standart-small-text"
+              <form
+                action="/script/tomail.php"
+                method="post"
+                class="feedback-container__form feedback-form"
+              >
+                <label
+                  for="name"
+                  class="feedback-form__name standart-small-text"
                   >Имя*</label
                 >
-                <input type="text" pattern="^[А-Яа-яЁё\s]+$" />
+                <input
+                  name="name"
+                  type="text"
+                  pattern="^[А-Яа-яЁё\s]+$"
+                  required
+                />
 
-                <label for="" class="feedback-form__phone standart-small-text"
+                <label
+                  for="phone"
+                  class="feedback-form__phone standart-small-text"
                   >Номер телефона*</label
                 >
-                <input class="_tel" type="text" />
+                <input name="phone" class="_tel" type="text" required />
 
                 <!-- <div class="feedback-form__choice">
                   <label>
@@ -404,7 +419,13 @@
                 <ul class="feedback-form__choice">
                   <li>
                     <label class="standart-small-text">Я родитель</label>
-                    <input type="radio" name="1" checked />
+                    <input
+                      name="user-type"
+                      value="Родитель"
+                      type="radio"
+                      name="1"
+                      checked
+                    />
                     <div class="bullet">
                       <div class="line zero"></div>
                       <div class="line one"></div>
@@ -418,7 +439,12 @@
                   </li>
                   <li>
                     <label class="standart-small-text">Я школьник</label>
-                    <input type="radio" name="1" />
+                    <input
+                      name="user-type"
+                      value="Ученик"
+                      type="radio"
+                      name="1"
+                    />
                     <div class="bullet">
                       <div class="line zero"></div>
                       <div class="line one"></div>
@@ -624,9 +650,37 @@
           >Carousel controller</a
         >
       </section>
+
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__logo-container min-logo">
+            <div class="min-logo__img"></div>
+            <div class="min-logo__text">школа математики</div>
+          </div>
+
+          <div class="footer__info-container footer-info">
+            <div class="footer-info__img img-letter"></div>
+            <p class="footer-info__text">Наша почта</p>
+            <a href="mailto:shoolreshay@gmail.com" class="footer-info__contact"
+              >shoolreshay@gmail.com</a
+            >
+          </div>
+
+          <div class="footer__info-container footer-info">
+            <div class="footer-info__img img-phone"></div>
+            <p class="footer-info__text">Бесплатная консультация</p>
+            <a href="tel:+79803740656" class="footer-info__contact"
+              >8-980-374-06-56</a
+            >
+          </div>
+
+          <div class="footer__btn-container">
+            <a href="#feedback" class="btn-neo footer__btn">Оставить заявку</a>
+          </div>
+        </div>
+      </footer>
     </main>
 
-    <footer></footer>
     <script src="./script/inputs.js"></script>
     <script src="./script/carusel.js"></script>
     <script src="./script/scroll.js"></script>
