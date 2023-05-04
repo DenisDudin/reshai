@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     $message = "Name: ".$name."\nPhone: ".$phone."\nUser Type: ".$user_type;
 
     $headers = "From: yourwebsite@example.com" . "\r\n" .
-        "Reply-To: yourwebsite@example.com" . "\r\n" .
+        "Reply-To: iversuss@yandex.ru" . "\r\n" .
         "X-Mailer: PHP/" . phpversion();
 
     if(mail($to, $subject, $message, $headers)){
