@@ -14,23 +14,6 @@
         <div class="main-menu__container container">
           <a href="./index.htm" class="main-menu__img-container scrollto"> </a>
 
-          <!-- <div class="main-menu__links">
-            <div class="main-menu__grades grades">
-              <a href="/pages/select.html" class="grades__link link-underline"
-                >5-7 класс</a
-              >
-              <a href="/pages/select.html" class="grades__link link-underline"
-                >8-9 класс</a
-              >
-              <a href="/pages/select.html" class="grades__link link-underline"
-                >10-11 класс</a
-              >
-            </div>
-
-            <div class="main-menu__btn-container">
-              <button class="one-color-btn one-color-btn--main">Курсы</button>
-            </div>
-          </div> -->
           <a class="main-menu__phone" href="tel:+79803740656">
             8 (980) 374-06-56
           </a>
@@ -48,9 +31,6 @@
 
             <div class="info__text">
               <ul>
-                <!-- <li>Готовим к ЕГЭ с любого уровня на необходимый</li>
-                <li>Развиваем логику и интерес к математике</li>
-                <li>Наши выпускники учатся в лучших вузах страны</li> -->
                 <li>14 живых уроков по 60-90 минут в конференции Zoom</li>
                 <li>
                   Занятия в мини-группах по 5-7 человек с камерами, микрофонами
@@ -68,8 +48,6 @@
             </div>
 
             <div class="info__buttons">
-              <!-- <a href="" class="btn-neo">Записаться</a>
-              <a href="#" class="link-underline">Попробовать бесплатно</a> -->
               <a href="#feedback" class="btn-neo">Присоединиться к марафону</a>
             </div>
           </div>
@@ -235,81 +213,6 @@
         </div>
       </section>
 
-      <!-- <section class="choice">
-        <div class="container">
-          <div class="choice__cards">
-            <div class="choice__card">
-              <h3 class="choice__card-name matte-blue-text">Курсы</h3>
-              <p class="choice__card-text">
-                Смотри видеоуроки в удобное время, выполняй домашнее задание,
-                получай обратную связь от преподавателя.
-              </p>
-              <div class="choice__img-container">
-                <img
-                  src="./img/arts/presentation.png"
-                  alt="Курс"
-                  class="choice__img"
-                />
-              </div>
-              <a href="" class="choice__card-btn matte-blue-background"
-                >Подробнее &#10140;</a
-              >
-            </div>
-
-            <div class="choice__card">
-              <h3 class="choice__card-name matte-pink-text">Мини-группы</h3>
-              <p class="choice__card-text">
-                Живые занятия с преподавателем в группе до 6 человек с камерой и
-                микрофоном. Внимание каждому ученику и команда единомышленников.
-              </p>
-              <div class="choice__img-container">
-                <img
-                  src="./img/arts/people-sitting-on-books.png"
-                  alt="Люди на книгах"
-                  class="choice__img"
-                />
-              </div>
-              <a href="" class="choice__card-btn matte-pink-background"
-                >Подробнее &#10140;</a
-              >
-            </div>
-
-            <div class="choice__card">
-              <h3 class="choice__card-name matte-orange-text">Репетиторы</h3>
-              <p class="choice__card-text">
-                Занимайся индивидуально с преподавателем. Разработаем план
-                работы под каждого ученика для достижения любой цели.
-              </p>
-              <div class="choice__img-container">
-                <img
-                  src="./img/arts/teacher-and-triangle.png"
-                  alt="Репетитор"
-                  class="choice__img"
-                />
-              </div>
-              <a href="" class="choice__card-btn matte-orange-background"
-                >Подробнее &#10140;</a
-              >
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- <section class="test-sale">
-        <div class="container">
-          <div class="test-sale__block">
-            <div class="test-sale__info">
-              <p class="test-sale__text">
-                Пройди тест, определи, какой формат для тебя подходит
-              </p>
-              <a href="" class="test-sale__test-link"
-                >Пройти тест - получить скидку</a
-              >
-            </div>
-          </div>
-        </div>
-      </section> -->
-
       <section class="achievements">
         <div class="container">
           <h2 class="achievements__title section-title">
@@ -359,9 +262,6 @@
 
       <section id="feedback" class="feedback">
         <div class="container">
-          <!-- <h2 class="feedback__title section-title">
-            Хотите задать дополнительные вопросы?
-          </h2> -->
           <h2 class="feedback__title section-title">
             Чтобы присоединиться, оставьте Ваши контакты
           </h2>
@@ -375,18 +275,10 @@
             </div>
 
             <div class="feedback-container__form-block">
-              <!-- <h3 class="feedback-container__title">Оставьте заявку</h3> -->
               <h3 class="feedback-container__title">
                 Мы свяжемся с Вами, ответим на вопросы и запишем на марафон
               </h3>
-              <!-- <p class="feedback-container__text">
-                для записи на бесплатный урок
-              </p> -->
-              <form
-                action="/script/tomail.php"
-                method="post"
-                class="feedback-container__form feedback-form"
-              >
+              <form class="feedback-container__form feedback-form">
                 <label
                   for="name"
                   class="feedback-form__name standart-small-text"
@@ -406,16 +298,6 @@
                 >
                 <input name="phone" class="_tel" type="text" required />
 
-                <!-- <div class="feedback-form__choice">
-                  <label>
-                    <span class="standart-small-text">Я родитель</span>
-                    <input type="radio" name="user-type" value="student" />
-                  </label>
-                  <label>
-                    <span class="standart-small-text">Я школьник</span>
-                    <input type="radio" name="user-type" value="parent" />
-                  </label>
-                </div> -->
                 <ul class="feedback-form__choice">
                   <li>
                     <label class="standart-small-text">Я родитель</label>
@@ -685,6 +567,7 @@
     <script src="./script/carusel.js"></script>
     <script src="./script/scroll.js"></script>
     <script src="./script/marathon.js"></script>
+    <script src="./script/formSend.js"></script>
     <script src="https://hammerjs.github.io/dist/hammer.js"></script>
   </body>
 </html>
