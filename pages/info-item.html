@@ -12,29 +12,19 @@
     <header>
       <nav class="main-menu">
         <div class="main-menu__container container">
-          <a href="../index.html" class="main-menu__img-container">
-            <img src="../img/icons/logo.svg" alt="логотип" />
+          <a href="../" class="main-menu__img-container scrollto"> </a>
+
+          <a class="main-menu__phone" href="tel:+79803740656">
+            8 (980) 374-06-56
           </a>
-
-          <div class="main-menu__links">
-            <div class="main-menu__grades grades">
-              <a href="#" class="grades__link link-underline">5-7 класс</a>
-              <a href="#" class="grades__link link-underline">8-9 класс</a>
-              <a href="#" class="grades__link link-underline">10-11 класс</a>
-            </div>
-
-            <div class="main-menu__btn-container">
-              <button class="one-color-btn one-color-btn--main">Курсы</button>
-            </div>
-          </div>
         </div>
       </nav>
     </header>
 
     <main>
       <section class="info-item">
-        <div class="container">
-          <h1 class="item-title">Повторим ВСЕ / хочу 5</h1>
+        <div id="info-item-container" class="container">
+          <!-- <h1 class="item-title">Повторим ВСЕ / хочу 5</h1>
           <div class="item-markers">
             <div class="item-markers__marker select-block">9 класс</div>
             <div class="item-markers__marker select-block">
@@ -56,7 +46,7 @@
               </p>
 
               <div class="info-product__buttons">
-                <a href="" class="btn-neo">Записаться</a>
+                <a href="" class="btn-neo btn-neo--main-color">Записаться</a>
                 <a href="#" class="link-underline">Попробовать бесплатно</a>
               </div>
             </div>
@@ -93,9 +83,40 @@
                 <div class="lesson-stcker__info">9 класс, подготовка к ОГЭ</div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__logo-container min-logo">
+          <div class="min-logo__img"></div>
+          <div class="min-logo__text">школа математики</div>
+        </div>
+
+        <div class="footer__info-container footer-info">
+          <div class="footer-info__img img-letter"></div>
+          <p class="footer-info__text">Наша почта</p>
+          <a href="mailto:shoolreshay@gmail.com" class="footer-info__contact"
+            >shoolreshay@gmail.com</a
+          >
+        </div>
+
+        <div class="footer__info-container footer-info">
+          <div class="footer-info__img img-phone"></div>
+          <p class="footer-info__text">Бесплатная консультация</p>
+          <a href="tel:+79803740656" class="footer-info__contact"
+            >8-980-374-06-56</a
+          >
+        </div>
+
+        <div class="footer__btn-container">
+          <a href="#feedback" class="btn-neo footer__btn">Оставить заявку</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/script/info-item.js"></script>
   </body>
 </html>

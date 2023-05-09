@@ -10,13 +10,18 @@ window.onload = function (data) {
 };
 
 function createProductList(productsList) {
-  const container = document.querySelector("#product-list .container");
+  const container = document.querySelector(".product-list__wrapper");
   const fragment = document.createDocumentFragment();
   productsList.forEach((product) => {
     const element = createElement({
       tag: "div",
       className: "product product-list__item product-item",
       attributes: product.tags,
+    });
+
+    const itemInner = createElement({
+      tag: "div",
+      className: "product-item__inner",
     });
     //image element
     const imgWrap = createElement({
@@ -53,14 +58,13 @@ function createProductList(productsList) {
     imgDescription.appendChild(imgText);
     imgContainer.appendChild(imgDescription);
     imgWrap.appendChild(imgContainer);
-    element.appendChild(imgWrap);
+    itemInner.appendChild(imgWrap);
 
     //info
     const infoContainer = createElement({
       tag: "div",
       className: "product-item__info-container",
     });
-
     const infoUp = createElement({
       tag: "div",
       className: "product-item__info-up",
@@ -79,6 +83,20 @@ function createProductList(productsList) {
       tag: "div",
       className: "product-item__info-markers markers-list",
     });
+    product.markers.forEach((marker) => {
+      const infoMarker = createElement({
+        tag: "li",
+        className: "marker__text",
+        text: marker,
+      });
+      infoMarkers.appendChild(infoMarker);
+    });
+
+    infoUp.appendChild(infoTitle);
+    infoUp.appendChild(infoText);
+    infoUp.appendChild(infoMarkers);
+    infoContainer.appendChild(infoUp);
+    itemInner.appendChild(infoContainer);
 
     const infoDown = createElement({
       tag: "div",
@@ -99,21 +117,22 @@ function createProductList(productsList) {
       text: "Записаться",
     });
     const btnMore = createElement({
-      tag: "button",
-      className: "product-item__btn one-color-btn",
+      tag: "a",
+      className: "product-item__btn product-item__btn--more one-color-btn",
       text: "Подробнее",
     });
+    btnMore.href = "./info-item.html";
+    btnMore.onclick = function () {
+      sessionStorage.setItem("product", JSON.stringify(product));
+    };
 
-    infoUp.appendChild(infoTitle);
-    infoUp.appendChild(infoText);
-    infoUp.appendChild(infoMarkers);
     infoDown.appendChild(price);
     buttons.appendChild(btnEnroll);
     buttons.appendChild(btnMore);
     infoDown.appendChild(buttons);
-    infoContainer.appendChild(infoUp);
-    infoContainer.appendChild(infoDown);
-    element.appendChild(infoContainer);
+
+    element.appendChild(itemInner);
+    element.appendChild(infoDown);
 
     fragment.appendChild(element);
   });
@@ -144,7 +163,15 @@ function filterProducts() {
   const typeSelect = document.getElementById("type-select");
   const products = document.querySelectorAll(".product");
 
-  function filterProducts() {
+  if (localStorage.getItem("select")) {
+    document.querySelector(
+      `option[data-select="${localStorage.getItem("select")}"]`
+    ).selected = true;
+    localStorage.removeItem("select");
+    filterProduct();
+  }
+
+  function filterProduct() {
     const classValue = classSelect.value;
     const groupValue = groupSelect.value;
     const typeValue = typeSelect.value;
@@ -180,7 +207,7 @@ function filterProducts() {
     });
   }
 
-  classSelect.addEventListener("change", filterProducts);
-  groupSelect.addEventListener("change", filterProducts);
-  typeSelect.addEventListener("change", filterProducts);
+  classSelect.addEventListener("change", filterProduct);
+  groupSelect.addEventListener("change", filterProduct);
+  typeSelect.addEventListener("change", filterProduct);
 }

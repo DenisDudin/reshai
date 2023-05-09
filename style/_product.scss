@@ -1,0 +1,264 @@
+.info-item {
+  padding: 50px 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 30px 0;
+  }
+}
+
+.item-title {
+  margin-bottom: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: #8aa6cd;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 2.8rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 2.6rem;
+  }
+
+  @media screen and (max-width: 414px) {
+    font-size: 6cqw;
+    margin-bottom: 8px;
+  }
+}
+
+.item-markers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media screen and (max-width: 1000px) {
+    gap: 10px;
+  }
+
+  &__marker {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 1.4rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.3rem;
+      padding: 7px 12px;
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: 1.2rem;
+      padding: 5px 10px;
+    }
+  }
+}
+
+.info-product-wrapper {
+  margin: 80px 0;
+  display: flex;
+
+  @media screen and (max-width: 1200px) {
+    margin: 60px 0;
+  }
+
+  @media screen and (max-width: 1000px) {
+    margin: 40px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.info-product {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-style: normal;
+  color: #333333;
+
+  @media screen and (max-width: 767px) {
+    order: 2;
+    margin: 0 4%;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 5rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 150%;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    @media screen and (max-width: 414px) {
+      gap: 20px;
+    }
+
+    a {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: #333333;
+
+      @media screen and (max-width: 767px) {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 414px) {
+        font-size: 1.4rem;
+      }
+
+      &:first-child {
+        padding: 12px 20px;
+      }
+    }
+  }
+}
+
+.img-product {
+  width: 50%;
+
+  @media screen and (max-width: 1200px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 767px) {
+    order: 1;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.lesson-list {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+
+  @media screen and (max-width: 1000px) {
+    gap: 5%;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}
+
+.lesson-stcker {
+  padding: 2rem 4rem;
+  display: flex;
+  min-width: 300px;
+  width: 45%;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 15px 0 0 $main-color inset;
+  border-radius: 35px;
+
+  @media screen and (max-width: 1000px) {
+    width: 48%;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 95%;
+    max-width: 400px;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: 414px) {
+    flex-direction: column;
+  }
+
+  &__left {
+    margin-right: 30px;
+
+    @media screen and (max-width: 414px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 0;
+    }
+  }
+
+  &__time,
+  &__info {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.2em;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__name,
+  &__day {
+    margin-bottom: 2rem;
+    font-family: "VAG-World";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: $main-color;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__day {
+    color: #333;
+  }
+}

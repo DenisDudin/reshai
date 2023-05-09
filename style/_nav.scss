@@ -81,6 +81,10 @@ main {
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: 1200px) {
+    margin: 0 5%;
+  }
+
   @media screen and (max-width: 1000px) {
     margin: 0 auto;
     position: absolute;
@@ -91,18 +95,23 @@ main {
     justify-content: center;
   }
 
+  @media screen and (max-width: 767px) {
+    gap: 5%;
+  }
+
   @media screen and (max-width: 414px) {
-    bottom: -40px;
-    gap: 7%;
+    flex-wrap: wrap;
+    bottom: -80px;
   }
 
   &__link {
     color: black;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
 
     @media screen and (max-width: 414px) {
       font-size: 1.6rem;
+      margin-bottom: 10px;
     }
   }
 }
